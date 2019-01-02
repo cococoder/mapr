@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ref:</strong>
+  <%= @body_map.ref %>
+</p>
+
+<div>
+  <div data-controller="map" data-map-ref="<%= @body_map.ref %>">
+    <%=image_tag "body_map",
+                 "data-action": "click->map#mark"
+
+    %>
+  </div>
+</div>
+
+
+<%= link_to 'Edit', edit_body_map_path(@body_map) %> |
+<%= link_to 'Back', body_maps_path %>

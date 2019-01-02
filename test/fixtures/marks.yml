@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  context: MyString
+  left: 1
+  top: 1
+
+two:
+  context: MyString
+  left: 1
+  top: 1

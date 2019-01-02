@@ -1,0 +1,2 @@
+class BodyMap < ApplicationRecord
+end

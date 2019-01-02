@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Context:</strong>
+  <%= @mark.context %>
+</p>
+
+<p>
+  <strong>Left:</strong>
+  <%= @mark.left %>
+</p>
+
+<p>
+  <strong>Top:</strong>
+  <%= @mark.top %>
+</p>
+
+<%= link_to 'Edit', edit_mark_path(@mark) %> |
+<%= link_to 'Back', marks_path %>

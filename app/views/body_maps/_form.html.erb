@@ -1,0 +1,22 @@
+<%= form_with(model: body_map, local: true) do |form| %>
+  <% if body_map.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(body_map.errors.count, "error") %> prohibited this body_map from being saved:</h2>
+
+      <ul>
+      <% body_map.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ref %>
+    <%= form.text_field :ref %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

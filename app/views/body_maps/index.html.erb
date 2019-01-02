@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Body Maps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ref</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @body_maps.each do |body_map| %>
+      <tr>
+        <td><%= body_map.ref %></td>
+        <td><%= link_to 'Show', body_map %></td>
+        <td><%= link_to 'Edit', edit_body_map_path(body_map) %></td>
+        <td><%= link_to 'Destroy', body_map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Body Map', new_body_map_path %>
