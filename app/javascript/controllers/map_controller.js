@@ -7,8 +7,8 @@ export default class extends Controller {
         console.log(e);
         console.log(this.data.get("ref"));
         var mark = {
-            top: e.clientY,
-            left: e.clientX,
+            top: e.clientY - 16,
+            left: e.clientX - 16,
             body_map: this.data.get("ref")
         };
 
