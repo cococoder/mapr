@@ -1,5 +1,5 @@
 class BodyMapsController < ApplicationController
-  before_action :set_body_map, only: [:show, :edit, :update, :destroy]
+  before_action :set_body_map, only: [:show, :edit, :update, :destroy,:clear]
 
   # GET /body_maps
   # GET /body_maps.json
@@ -10,6 +10,11 @@ class BodyMapsController < ApplicationController
   # GET /body_maps/1
   # GET /body_maps/1.json
   def show
+  end
+
+  def clear
+    Mark.where(context: @body_map.ref).delete_all
+    redirect_to @body_map
   end
 
   # GET /body_maps/new
