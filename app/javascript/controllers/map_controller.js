@@ -16,6 +16,7 @@ export default class extends Controller {
         mark_image.style.position = "absolute";
         mark_image.style.top = mark.top + "px";
         mark_image.style.left = mark.left + "px" ;
+        mark_image.style.display = "block";
 
         fetch(`/mark/add/${mark.body_map}/left/${mark.left}/top/${mark.top}`,{method:'GET'});
         this.element.appendChild(mark_image);

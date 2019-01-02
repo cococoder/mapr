@@ -5,25 +5,7 @@
   <%= @body_map.ref %>
 </p>
 
-<div>
-  <div data-controller="map" data-map-ref="<%= @body_map.ref %>" data-map-id="<%= @body_map.id %>">
-
-    <%=image_tag "mark", style:"", "data-target":"map.mark"%>
-
-    <% Mark.where(context: @body_map.ref).each do |mark| %>
-      <%=image_tag "mark",
-                   "data-action": "click->map#unmark",
-                   style:"position:absolute;top:#{mark.top}px;left:#{mark.left}px;z-index:1"
-      %>
-    <% end %>
-
-    <%=image_tag "body_map",
-                 style: "position:relative;",
-                 "data-action": "click->map#mark"
-
-    %>
-  </div>
-</div>
+<%= render 'canvass' , source: @body_map %>
 
 <%= link_to 'Edit', edit_body_map_path(@body_map) %> |<%= link_to 'Clear', clear_body_map_path(@body_map) %> |
 <%= link_to 'Back', body_maps_path %>

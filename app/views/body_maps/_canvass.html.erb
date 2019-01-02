@@ -1,0 +1,19 @@
+<div>
+  <div data-controller="map" data-map-ref="<%= source.ref %>" data-map-id="<%= source.id %>">
+
+    <%=image_tag "mark", style:"display:none", "data-target":"map.mark"%>
+
+    <% Mark.where(context: source.ref).each do |mark| %>
+      <%=image_tag "mark",
+                   "data-action": "click->map#unmark",
+                   style:"position:absolute;top:#{mark.top}px;left:#{mark.left}px;z-index:1"
+      %>
+    <% end %>
+
+    <%=image_tag "body_map",
+                 style: "position:relative;",
+                 "data-action": "click->map#mark"
+
+    %>
+  </div>
+</div>
