@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_02_180040) do
+ActiveRecord::Schema.define(version: 2019_01_03_091353) do
 
   create_table "body_maps", force: :cascade do |t|
     t.string "ref"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2019_01_02_180040) do
     t.integer "top"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "uid"
   end
 
 end

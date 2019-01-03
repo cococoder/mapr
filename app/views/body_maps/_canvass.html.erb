@@ -6,7 +6,8 @@
     <% Mark.where(context: source.ref).each do |mark| %>
       <%=image_tag "mark",
                    "data-action": "click->map#unmark",
-                   style:"position:absolute;top:#{mark.top}px;left:#{mark.left}px;z-index:1"
+                   "data-mark-id": mark.uid,
+                   style:"position:absolute;top:#{offset mark.top}px;left:#{offset  mark.left}px;z-index:1"
       %>
     <% end %>
 

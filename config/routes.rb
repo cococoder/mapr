@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get'/mark/add/:body_map/left/:left/top/:top', controller: :mark, action: :add
+
+  get'/mark/add/:body_map/left/:left/top/:top/uid/:uid', controller: :mark, action: :add
+  get'/mark/remove/:uid', controller: :mark, action: :remove
+
   resources :body_maps do
     member do
       get 'clear'

@@ -6,6 +6,7 @@
 </p>
 
 <%= render 'canvass' , source: @body_map %>
+<%= render 'marks/list', source: Mark.where(context: @body_map.ref) %>
 
 <%= link_to 'Edit', edit_body_map_path(@body_map) %> |<%= link_to 'Clear', clear_body_map_path(@body_map) %> |
 <%= link_to 'Back', body_maps_path %>
